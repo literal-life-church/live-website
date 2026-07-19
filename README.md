@@ -1,45 +1,36 @@
-# Astro Starter Kit: Minimal
+# Live Website
 
-A fully-featured, configured, and embeddable website containing only our video player for playing our live streams
+A single-page, shareable website that embeds Literal Life Church's [live stream video player](https://github.com/literal-life-church/video-player). Its purpose it to be a fully contained website that is easy to share on social media via its OpenGraph metadata and hosted with a quick, memorable link to write down and share for others to visit.
 
-```sh
-npm create astro@latest -- --template minimal
+## Prerequisites
+
+- [Node.js LTS](https://nodejs.org/en/download)
+- [Cloudflare account](https://dash.cloudflare.com/sign-up)
+- [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/install-and-update/) (installed automatically via `npm install`)
+
+## Local Setup
+
+```bash
+git clone git@github.com:literal-life-church/live-website.git
+cd live-website
+
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The site will be available at `http://localhost:4321/`.
 
-## 🚀 Project Structure
+## Scripts
 
-Inside of your Astro project, you'll see the following folders and files:
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start the local development server with hot reload |
+| `npm run build` | Build the production site to `./dist/` |
+| `npm run deploy` | Build and deploy directly to Cloudflare Workers |
+| `npm run dev:astro ...` | Run CLI commands like `astro add`, `astro check` |
+| `npm run dev:preview` | Build and preview the production site locally before deploying |
+| `npm run dev:types` | Regenerate TypeScript types from `wrangler.jsonc` bindings |
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Deployment
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Cloudflare's native build pipeline automatically builds and deploys preview versions of this site on every push.

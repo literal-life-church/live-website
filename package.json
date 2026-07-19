@@ -1,19 +1,21 @@
 {
 	"name": "live-website",
-	"type": "module",
+    "description": "A single-page, shareable website that embeds Literal Life Church's live stream video player",
 	"version": "0.0.1",
+    "private": true,
 	"engines": {
 		"node": ">=22.12.0"
 	},
 	"scripts": {
-		"dev": "astro dev",
 		"build": "astro build",
 		"postbuild": "node scripts/strip-legacy-env.mjs",
-		"preview": "astro build && astro preview",
-		"astro": "astro",
-		"generate-types": "wrangler types",
+
 		"deploy": "astro build && wrangler deploy",
-		"cf-typegen": "wrangler types"
+        "dev": "astro dev",
+
+		"dev:astro": "astro",
+		"dev:preview": "astro build && astro preview",
+		"dev:types": "wrangler types"
 	},
 	"dependencies": {
 		"@astrojs/cloudflare": "14.1.3",
