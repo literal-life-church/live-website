@@ -1,0 +1,10 @@
+{
+    "editor.defaultFormatter": "EditorConfig.EditorConfig",
+    "editor.detectIndentation": false,
+    "editor.indentSize": 4,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+    "files.associations": {
+        "wrangler.json": "jsonc"
+    }
+}
