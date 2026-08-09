@@ -9,9 +9,33 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Literal Life Church — Live</title>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/literal-life-church/video-player@2026.04.01/styles.min.css" />
+		<link rel="stylesheet" href="https://use.typekit.net/eli7zml.css" />
+
+		<style>
+			html,
+			body {
+				height: 100%;
+				margin: 0;
+			}
+
+			#literal-life-church-video-player {
+				height: 100%;
+				max-width: none;
+				width: 100%;
+			}
+		</style>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<div
+			id="literal-life-church-video-player"
+			data-backend-host="api.media.literallife.church"
+			data-offline-message="# Stream is Offline
+
+Please check back again during our regular service times or find prior sermons [in our archive](https://www.literallife.church/sermons)."></div>
+
+		<script is:inline src="https://cdn.jsdelivr.net/gh/literal-life-church/video-player@2026.04.01/player.min.js"></script>
 	</body>
 </html>
